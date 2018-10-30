@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!--duration: Duration of the animation in which the animation should complete-->
+<!--alpha : opacity 1:visible 2:transparent-->
+<!--interpolator : It is the rate of change in animation. We can define our own interpolator using the time as the constraint-->
+<!--repeatMode : useful when you want the animation to be repeat-->
+<!--repeatCount : This defines number of repetitions on animation-->
+
+<set xmlns:android="http://schemas.android.com/apk/res/android">
+    <alpha android:fromAlpha="0.0"
+        android:toAlpha="1.0"
+        android:interpolator="@android:anim/accelerate_interpolator"
+        android:duration="600"
+        android:repeatMode="reverse"
+        android:repeatCount="infinite"/>
+</set>
