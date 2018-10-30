@@ -1,11 +1,14 @@
 package com.eldhopj.animationsinandroid;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
 import android.widget.TextView;
+
+import com.eldhopj.animationsinandroid.SharedElementTransition.SharedAnimeTransation;
 
 public class MainActivity extends AppCompatActivity {
 TextView fadeInTv,fadeOutTv,crossInTv,crossOutTv,blinkTv, zoomInTv,zoomOutTv, rotateTv, moveTv, slideUpTv, slideDownTv;
@@ -57,12 +60,6 @@ TextView fadeInTv,fadeOutTv,crossInTv,crossOutTv,blinkTv, zoomInTv,zoomOutTv, ro
         blinkTv.startAnimation(blinkAnimation);
     }
 
-    private Animation animationUtils(int id){
-        Animation animation = AnimationUtils.loadAnimation(getApplicationContext(),id); //AnimationUtils : Loading animation logic
-        return animation;
-    }
-
-
     public void zoomIn(View view) {
         Animation zoomInAnimation = animationUtils(R.anim.zoom_in);
         zoomInTv.startAnimation(zoomInAnimation);
@@ -91,5 +88,17 @@ TextView fadeInTv,fadeOutTv,crossInTv,crossOutTv,blinkTv, zoomInTv,zoomOutTv, ro
     public void slideDown(View view) {
         Animation slideDownAnimation = animationUtils(R.anim.slide_down);
         slideDownTv.startAnimation(slideDownAnimation);
+    }
+
+    private Animation animationUtils(int id){
+        Animation animation = AnimationUtils.loadAnimation(getApplicationContext(),id); //AnimationUtils : Loading animation logic
+        return animation;
+    }
+
+
+
+    public void startSharedTransActivity(View view) {
+        Intent intent = new Intent(getApplicationContext(),SharedAnimeTransation.class);
+        startActivity(intent);
     }
 }
