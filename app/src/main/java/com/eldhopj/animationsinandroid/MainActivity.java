@@ -106,4 +106,9 @@ TextView fadeInTv,fadeOutTv,crossInTv,crossOutTv,blinkTv, zoomInTv,zoomOutTv, ro
         Intent intent = new Intent(getApplicationContext(),TextSwitcherActivity.class);
         startActivity(intent);
     }
+
+    public void circularReveal(View view) {
+        Intent intent = new Intent(getApplicationContext(),CircularRevealActivity.class);
+        startActivity(intent);
+    }
 }

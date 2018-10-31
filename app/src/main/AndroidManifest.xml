@@ -18,7 +18,8 @@
         </activity>
         <activity android:name=".SharedElementTransition.SharedAnimeTransation" />
         <activity android:name=".SharedElementTransition.DetailedActivity" />
-        <activity android:name=".TextSwitcherActivity"></activity>
+        <activity android:name=".TextSwitcherActivity" />
+        <activity android:name=".CircularRevealActivity" />
     </application>
 
 </manifest>
