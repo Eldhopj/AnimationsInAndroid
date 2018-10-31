@@ -20,6 +20,7 @@
         <activity android:name=".SharedElementTransition.DetailedActivity" />
         <activity android:name=".TextSwitcherActivity" />
         <activity android:name=".CircularRevealActivity" />
+        <activity android:name=".GradientAnimationActivity"></activity>
     </application>
 
 </manifest>

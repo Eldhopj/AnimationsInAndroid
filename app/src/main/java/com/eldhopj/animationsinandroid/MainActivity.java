@@ -111,4 +111,9 @@ TextView fadeInTv,fadeOutTv,crossInTv,crossOutTv,blinkTv, zoomInTv,zoomOutTv, ro
         Intent intent = new Intent(getApplicationContext(),CircularRevealActivity.class);
         startActivity(intent);
     }
+
+    public void gradientAnimation(View view) {
+        Intent intent = new Intent(getApplicationContext(),GradientAnimationActivity.class);
+        startActivity(intent);
+    }
 }
