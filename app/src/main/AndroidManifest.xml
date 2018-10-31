@@ -17,7 +17,8 @@
             </intent-filter>
         </activity>
         <activity android:name=".SharedElementTransition.SharedAnimeTransation" />
-        <activity android:name=".SharedElementTransition.DetailedActivity"></activity>
+        <activity android:name=".SharedElementTransition.DetailedActivity" />
+        <activity android:name=".TextSwitcherActivity"></activity>
     </application>
 
 </manifest>

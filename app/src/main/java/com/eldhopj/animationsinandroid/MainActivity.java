@@ -101,4 +101,9 @@ TextView fadeInTv,fadeOutTv,crossInTv,crossOutTv,blinkTv, zoomInTv,zoomOutTv, ro
         Intent intent = new Intent(getApplicationContext(),SharedAnimeTransation.class);
         startActivity(intent);
     }
+
+    public void textSwitcher(View view) {
+        Intent intent = new Intent(getApplicationContext(),TextSwitcherActivity.class);
+        startActivity(intent);
+    }
 }
