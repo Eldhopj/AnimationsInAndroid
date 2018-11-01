@@ -11,6 +11,7 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
+
         <Button
         android:id="@+id/fadeIn"
         android:layout_width="wrap_content"
@@ -244,17 +245,39 @@
             app:layout_constraintStart_toEndOf="@+id/slideDown" />
 
         <Button
+            android:id="@+id/bounce"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:onClick="bounce"
+            android:text="Bounce"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/slideDown" />
+
+        <TextView
+            android:id="@+id/bounceTv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginEnd="8dp"
+            android:text="Bounce"
+            app:layout_constraintBaseline_toBaselineOf="@+id/bounce"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/bounce" />
+
+        <Button
             android:id="@+id/sharedTrans"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginStart="8dp"
             android:layout_marginTop="8dp"
             android:layout_marginEnd="8dp"
-            android:text="Shared Transition Activity"
             android:onClick="startSharedTransActivity"
+            android:text="Shared Transition Activity"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/slideDown" />
+            app:layout_constraintTop_toBottomOf="@+id/bounce" />
 
         <Button
             android:id="@+id/textSwitcherBtn"
@@ -294,6 +317,32 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/circularRevealBtn" />
+
+        <Button
+            android:id="@+id/activityTransitionBtn"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="8dp"
+            android:onClick="activityTransition"
+            android:text="Activity Transition"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/gradentAnimationBtn" />
+
+        <Button
+            android:id="@+id/colorpalette"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="8dp"
+            android:text="Color Palette"
+            android:onClick="colorPalette"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/activityTransitionBtn" />
 
 
     </android.support.constraint.ConstraintLayout>

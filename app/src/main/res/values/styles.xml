@@ -11,4 +11,15 @@
         <item name="android:windowContentTransitions">true</item>
     </style>
 
+        <!--For activity transition style-->
+    <style name="activityAnimation" parent="AppTheme">
+        <item name="android:windowAnimationStyle">@style/activityAnimationLogic</item>
+    </style>
+    <style name="activityAnimationLogic" parent="@android:style/Animation.Activity">
+    <item name="android:activityOpenEnterAnimation">@anim/activity_slide_in_right</item>
+    <item name="android:activityOpenExitAnimation">@anim/activity_slide_out_left</item>
+    <item name="android:activityCloseEnterAnimation">@anim/activity_slide_in_left</item>
+    <item name="android:activityCloseExitAnimation">@anim/activity_slide_out_right</item>
+    </style>
+
 </resources>

@@ -8,10 +8,16 @@ import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
 import android.widget.TextView;
 
+import com.eldhopj.animationsinandroid.ActivitySlideAnimation.FirstActivity;
 import com.eldhopj.animationsinandroid.SharedElementTransition.SharedAnimeTransation;
 
+/**For to know more on Xml anim elements check out : <a href https://developer.android.com/guide/topics/resources/animation-resource#Frame/>*/
+
 public class MainActivity extends AppCompatActivity {
-TextView fadeInTv,fadeOutTv,crossInTv,crossOutTv,blinkTv, zoomInTv,zoomOutTv, rotateTv, moveTv, slideUpTv, slideDownTv;
+    private static final String TAG = "MainActivity";
+
+
+TextView fadeInTv,fadeOutTv,crossInTv,crossOutTv,blinkTv, zoomInTv,zoomOutTv, rotateTv, moveTv, slideUpTv, slideDownTv, bounceTv;
 
 
     @Override
@@ -30,6 +36,7 @@ TextView fadeInTv,fadeOutTv,crossInTv,crossOutTv,blinkTv, zoomInTv,zoomOutTv, ro
         moveTv = findViewById(R.id.moveTv);
         slideUpTv = findViewById(R.id.slideUpTv);
         slideDownTv = findViewById(R.id.slideDownTv);
+        bounceTv = findViewById(R.id.bounceTv);
     }
 
     public void fadeIn(View view) {
@@ -90,6 +97,11 @@ TextView fadeInTv,fadeOutTv,crossInTv,crossOutTv,blinkTv, zoomInTv,zoomOutTv, ro
         slideDownTv.startAnimation(slideDownAnimation);
     }
 
+    public void bounce(View view) {
+        Animation bounceAnimation = animationUtils(R.anim.bounce);
+        bounceTv.startAnimation(bounceAnimation);
+    }
+
     private Animation animationUtils(int id){
         Animation animation = AnimationUtils.loadAnimation(getApplicationContext(),id); //AnimationUtils : Loading animation logic
         return animation;
@@ -114,6 +126,16 @@ TextView fadeInTv,fadeOutTv,crossInTv,crossOutTv,blinkTv, zoomInTv,zoomOutTv, ro
 
     public void gradientAnimation(View view) {
         Intent intent = new Intent(getApplicationContext(),GradientAnimationActivity.class);
+        startActivity(intent);
+    }
+
+    public void activityTransition(View view) {
+        Intent intent = new Intent(getApplicationContext(),FirstActivity.class);
+        startActivity(intent);
+    }
+
+    public void colorPalette(View view) {
+        Intent intent = new Intent(getApplicationContext(),PaletteActivity.class);
         startActivity(intent);
     }
 }

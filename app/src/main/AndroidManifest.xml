@@ -20,7 +20,15 @@
         <activity android:name=".SharedElementTransition.DetailedActivity" />
         <activity android:name=".TextSwitcherActivity" />
         <activity android:name=".CircularRevealActivity" />
-        <activity android:name=".GradientAnimationActivity"></activity>
+        <activity android:name=".GradientAnimationActivity" />
+        <activity android:name=".ActivitySlideAnimation.FirstActivity" />
+        <activity
+            android:name=".ActivitySlideAnimation.SecondActivity"
+            android:theme="@style/activityAnimation" /> <!-- For activity transition style -->
+        <activity
+            android:name=".ActivitySlideAnimation.ThirdActivity"
+            android:theme="@style/activityAnimation" /> <!-- For activity transition style -->
+        <activity android:name=".PaletteActivity"></activity>
     </application>
 
 </manifest>
